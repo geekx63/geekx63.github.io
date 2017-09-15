@@ -30,7 +30,8 @@
                 return connection.type;
             } else {
                 if (/NetType/.test(setting.ua)) {
-                    alert(setting.ua.match(/NetType\//g));
+                    alert(setting.ua.match(/NetType\/(\S*)/));
+                    
                     if (setting.ua.match(/NetType\/(\S*)$/)[1] != 'WIFI') {
                         alert('wifi')
                     } else {
