@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function netType() {
+            // 只能用于移动设备网络状态检测
+            // bluetooth
+            // cellular
+            // ethernet
+            // none
+            // wifi
+            // other
+            // unknown
+            let connection = setting.connect;
+            if (connection) {
+                alert(connection.type)
+                return connection.type;
+            } else {
+                if (/NetType/.test(setting.ua)) {
+                    alert(setting.ua.match(/NetType\//g));
+                    if (setting.ua.match(/NetType\/(\S*)$/)[1] != 'WIFI') {
+                        alert('wifi')
+                    } else {
+                        alert(setting.ua.match(/NetType\/(\S*)$/))
+                    }
+                } else {
+                    alert(2)
+                }
+            }
+        }
+        netType();
+    </script>
+</body>
+
+</html>
