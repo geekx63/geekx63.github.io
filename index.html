@@ -10,6 +10,11 @@
 
 <body>
     <script>
+        var setting = {
+            type: '', // 网络类型
+            connect: window.navigator.connection || window.navigator.mozConnection || null,
+            ua: window.navigator.userAgent
+        }
         function netType() {
             // 只能用于移动设备网络状态检测
             // bluetooth
