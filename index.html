@@ -25,8 +25,12 @@
             // other
             // unknown
             let connection = setting.connect;
-            
-            alert(connection.type)
+            try{
+
+                alert(connection.type)
+            } catch(e){
+                
+            }
         
             if (/NetType/.test(setting.ua)) {
                 alert(setting.ua.match(/NetType\/(\S*)/));
