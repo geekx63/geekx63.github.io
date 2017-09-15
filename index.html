@@ -24,7 +24,7 @@
             // wifi
             // other
             // unknown
-            let oldOnLineType = window.navigator.onLine;
+            var oldOnLineType = window.navigator.onLine;
             if (window.navigator.connection) {
                 window.navigator.connection.onchange = function () {
                     document.dispatchEvent(new Event('network_change'))
@@ -36,6 +36,11 @@
                     }
                 }, 2000)
             }
+            
+            
+            document.addEventListener('network_change', function(){
+                console.log(window.navigator.onLine);
+            })
             let connection = setting.connect;
             try{
 
