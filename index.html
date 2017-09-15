@@ -25,22 +25,21 @@
             // other
             // unknown
             let connection = setting.connect;
-            if (connection) {
-                alert(connection.type)
-                return connection.type;
-            } else {
-                if (/NetType/.test(setting.ua)) {
-                    alert(setting.ua.match(/NetType\/(\S*)/));
-                    
-                    if (setting.ua.match(/NetType\/(\S*)$/)[1] != 'WIFI') {
-                        alert('wifi')
-                    } else {
-                        alert(setting.ua.match(/NetType\/(\S*)$/))
-                    }
+            
+            alert(connection.type)
+        
+            if (/NetType/.test(setting.ua)) {
+                alert(setting.ua.match(/NetType\/(\S*)/));
+                
+                if (setting.ua.match(/NetType\/(\S*)$/)[1] != 'WIFI') {
+                    alert('wifi')
                 } else {
-                    alert(2)
+                    alert(setting.ua.match(/NetType\/(\S*)$/))
                 }
+            } else {
+                alert(2)
             }
+            
         }
         netType();
     </script>
