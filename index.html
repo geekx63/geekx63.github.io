@@ -39,6 +39,11 @@
             
             
             document.addEventListener('network_change', function(){
+                alert(window.navigator.onLine);
+            })
+            
+            
+            document.addEventListener('network_change', function(){
                 console.log(window.navigator.onLine);
             })
             let connection = setting.connect;
