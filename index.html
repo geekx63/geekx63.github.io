@@ -24,12 +24,24 @@
             // wifi
             // other
             // unknown
+            let oldOnLineType = window.navigator.onLine;
+            if (window.navigator.connection) {
+                window.navigator.connection.onchange = function () {
+                    document.dispatchEvent(new Event('network_change'))
+                }
+            } else {
+                setInterval(function() {
+                    if (oldOnLineType !== window.navigator.onLine) {
+                        document.dispatchEvent(new Event('network_change'))
+                    }
+                }, 2000)
+            }
             let connection = setting.connect;
             try{
 
                 alert(connection.type)
             } catch(e){
-                
+
             }
         
             if (/NetType/.test(setting.ua)) {
