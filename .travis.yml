@@ -7,4 +7,4 @@ cache:
         - "node_modules"
 notifications:
     email:
-    - geekxing@163.com
+    - "geekxing@163.com"
