@@ -1,0 +1,22 @@
+{
+  "name": "geekx63.github.io",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "app.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geekx63/geekx63.github.io.git"
+  },
+  "keywords": [
+    "node",
+    "docker"
+  ],
+  "author": "geekx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geekx63/geekx63.github.io/issues"
+  },
+  "homepage": "https://github.com/geekx63/geekx63.github.io#readme"
+}
